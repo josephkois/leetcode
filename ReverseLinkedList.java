@@ -14,11 +14,11 @@ public class ReverseLinkedList {
         ListNode previousNode = null;
 
         while (currentNode != null) {
-            ListNode nextNode = currentNode;
+            ListNode nextNode = currentNode; //breaking link so store it in temp node
             currentNode.next = previousNode;
             previousNode = currentNode;
             currentNode = nextNode;
         }
-        return previousNode;
+        return previousNode; // equal to the new head
     }
 }
